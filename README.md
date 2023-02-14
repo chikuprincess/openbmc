@@ -104,10 +104,10 @@ mkdir build
 cd build
 ../configure --target-list=arm-softmmu
 make
-```sh
-### step3:
+```
+#### step3:
 Built file will be located at: arm-softmmu/qemu-system-arm
-```sh
+
 THIS IS CONTRIBUTED BY PRIYA
 
  
