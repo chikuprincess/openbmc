@@ -88,12 +88,15 @@ repository.
 
 ## steps to build qemu
 ### step1:
+```sh
 apt-get install -y pkg-config
 apt install ninja-build
 apt install libglib2.0-dev
 apt install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 apt-get install libvirt libvirt-bin bridge-utils uml-utilities qemu-system-common
+```
 ### step2:
+```sh
 git clone https://github.com/openbmc/qemu.git
 cd qemu
 git submodule update --init dtc
@@ -101,8 +104,11 @@ mkdir build
 cd build
 ../configure --target-list=arm-softmmu
 make
+```sh
 ### step3:
 Built file will be located at: arm-softmmu/qemu-system-arm
+```sh
+THIS IS CONTRIBUTED BY PRIYA
 
  
 
