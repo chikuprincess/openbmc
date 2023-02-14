@@ -110,7 +110,46 @@ Built file will be located at: arm-softmmu/qemu-system-arm
 
 THIS IS CONTRIBUTED BY PRIYA
 
+#### find the command to build and add new packages to open bmc firmware
+
+#### basic bitbake command
+```sh
+##### 1. to build kernel
+bitbake virtual/kernel
+```
+2. to clean and build kernel
+bitbake -c clean virtual/kernel
+bitbake -c cleanall virtual/kernel
+```
+3. bitbake virtual/kernel
+```
+3. to build a single package with bitbake
+example: to build ptpd
+bitbake ptpd
+to clean ptptd
+bitbake -c clean ptpd
+bitbake -c cleanall ptpd
+```
+4. to clean and build open bmc image
+bitbake -c clean obmc-phosphor-image
+bitbake -c cleanall obmc-phosphor-image 
+bitbake obmc-phosphor-image
+```
+5. to add a new package
+vi meta-evb/meta-evb-aspeed/meta-evb-ast2600/conf/layer.conf   
+IMAGE_INSTALL:append = " ntp"
+[add this chnages in github ] --> push it
+ setup ast1600-evb
+bitbake obmc-phosphor-image
+```
+6. to build u-boot
+   bitbake u-boot
+
  
+
+
+
+
 
 
 
